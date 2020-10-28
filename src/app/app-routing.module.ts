@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LogginComponent } from './components/loggin/loggin.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ModificardatosusuarioComponent } from './components/modificardatosusuario/modificardatosusuario.component';
+import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.component';
 
 const routes: Routes = [
 {
@@ -20,6 +21,10 @@ const routes: Routes = [
 {
   path: 'modificardatosusuario',
   component: ModificardatosusuarioComponent
+},
+{
+  path: 'cambiarclave',
+  component: CambiarclaveComponent
 }
 ];
 
