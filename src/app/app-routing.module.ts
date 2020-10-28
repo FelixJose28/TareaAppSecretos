@@ -4,6 +4,7 @@ import { LogginComponent } from './components/loggin/loggin.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ModificardatosusuarioComponent } from './components/modificardatosusuario/modificardatosusuario.component';
 import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.component';
+import { RegistrarsecretoComponent } from './components/registrarsecreto/registrarsecreto.component';
 
 const routes: Routes = [
 {
@@ -25,6 +26,10 @@ const routes: Routes = [
 {
   path: 'cambiarclave',
   component: CambiarclaveComponent
+},
+{
+  path: 'registrarsecreto',
+  component: RegistrarsecretoComponent
 }
 ];
 
