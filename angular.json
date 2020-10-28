@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SecretApp"
+    }
+  },
+  "defaultProject": "SecretApp",
+  "cli": {
+    "analytics": "59b24ab1-0c51-487e-8fdd-8fbe7770c1a9"
+  }
 }

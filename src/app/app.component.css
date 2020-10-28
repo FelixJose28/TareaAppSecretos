@@ -1,0 +1,17 @@
+
+.tRegistrar{
+  color: #A32B31;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* #fde34f */
+body{
+  background-image: url('./../assets/images/wave1.svg');
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+}
+
