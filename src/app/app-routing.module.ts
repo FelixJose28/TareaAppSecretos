@@ -5,6 +5,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { ModificardatosusuarioComponent } from './components/modificardatosusuario/modificardatosusuario.component';
 import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.component';
 import { RegistrarsecretoComponent } from './components/registrarsecreto/registrarsecreto.component';
+import { TodosecretosComponent } from './components/todosecretos/todosecretos.component';
 
 const routes: Routes = [
 {
@@ -30,6 +31,10 @@ const routes: Routes = [
 {
   path: 'registrarsecreto',
   component: RegistrarsecretoComponent
+},
+{
+  path: 'todosecretos',
+  component: TodosecretosComponent
 }
 ];
 

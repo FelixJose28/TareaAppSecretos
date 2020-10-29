@@ -11,5 +11,13 @@ export class TodosecretosComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  nombre = 'Felix'
+  getNombre(){
+    return this.nombre
+  }
+  col = 'text-success'
+  keyUpMethod(){
+      console.log('Presiono enter')
+  }
 
 }
