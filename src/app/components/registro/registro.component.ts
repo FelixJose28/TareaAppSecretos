@@ -22,7 +22,7 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
   registrarUser(){
-    this.authService.signUp(this.user)
+    this.authService.authregistrar(this.user)
       .subscribe(
         res => {
           console.log(res)
