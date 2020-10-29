@@ -1,28 +1,28 @@
 <div class="contenedor">
   <div class="mx-auto text-center" id="contentLoggin">
     <h1 class="">Registrarse</h1>
+      <form (submit)="registrarUser()">
+        <div>
+          <i class="fa fa-at "></i>
+          <input class="d-inline-block mx-auto form-control" [(ngModel)]="user.correo" name="correo" type="email" placeholder="Correo">
+        </div>
+        <div>
+          <i class="fa fa-user"></i>
+          <input class="d-inline-block mx-auto form-control" [(ngModel)]="user.nombre" name="nombre" type="text" placeholder="Nombre">
+        </div>
+        <div>
+          <i class="fa fa-unlock-alt"></i>
+          <input class="d-inline-block mx-auto form-control" [(ngModel)]="user.contrasena" name="contrasena" type="password" placeholder="Contraseña">
+        </div>
+        <div>
+          <i class="fa fa-unlock-alt"></i>
+          <input class="d-inline-block mx-auto form-control" name="repetircontrasena" type="password" placeholder="Repetir contraseña">
+        </div>
 
-    <div>
-      <i class="fa fa-at "></i>
-      <input class="d-inline-block mx-auto form-control" type="email" placeholder="Correo">
-    </div>
-    <div>
-      <i class="fa fa-user"></i>
-      <input class="d-inline-block mx-auto form-control" type="text" placeholder="Nombre">
-    </div>
-    <div>
-      <i class="fa fa-unlock-alt"></i>
-      <input class="d-inline-block mx-auto form-control" type="password" placeholder="Contraseña">
-    </div>
-    <div>
-      <i class="fa fa-unlock-alt"></i>
-      <input class="d-inline-block mx-auto form-control" type="password" placeholder="Repetir contraseña">
-    </div>
-
-    <div>
-      <button class="d-block mx-auto">Registrarse</button>
-    </div>
-
+      <div>
+        <button type="submit"class="d-block mx-auto">Registrarse</button>
+      </div>
+    </form>
   </div>
 </div>
 
