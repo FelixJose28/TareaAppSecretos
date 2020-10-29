@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
+import { Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ export class AuthService {
 
   private URL ='http://127.0.0.1:8000/api'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private router: Router) { }
 
   authregistrar(user){
     return this.http.post<any>(this.URL+'/registrar',user);
@@ -20,6 +22,13 @@ export class AuthService {
     if(localStorage.getItem('token') != null){
       return true
     }
+  }
+  authGetToken(){
+    return localStorage.getItem('token')
+  }
+  authLogout(){
+    localStorage.removeItem('token')
+    this.router.navigate['/loggin']
   }
 
 }

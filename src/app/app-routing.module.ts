@@ -7,6 +7,7 @@ import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.co
 import { RegistrarsecretoComponent } from './components/registrarsecreto/registrarsecreto.component';
 import { TodosecretosComponent } from './components/todosecretos/todosecretos.component';
 import { AuthGuard} from './auth.guard'
+import { AuthService } from './services/auth.service';
 
 const routes: Routes = [
 {

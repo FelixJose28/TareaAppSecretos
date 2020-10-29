@@ -19,12 +19,20 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="loggin" routerLinkActive="active">Loggin</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="registro" routerLinkActive="active">Registro</a>
-            </li>
+            <ng-container *ngIf="!authService.authestaLoggeado(); else logeado" >
+              <li class="nav-item">
+                <a class="nav-link" routerLink="loggin" routerLinkActive="active">Loggin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="registro" routerLinkActive="active">Registro</a>
+              </li>
+            </ng-container>
+            <ng-template #logeado>
+              <li class="nav-item">
+                <a class="nav-link" style="cursor: pointer;" (click)="authService.authLogout()" routerLink="loggin">Cerrar Session</a>
+              </li>
+            </ng-template>
+
           </ul>
         </div>
       </div>
