@@ -12,6 +12,7 @@ import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.co
 import { TodosecretosComponent } from './components/todosecretos/todosecretos.component';
 import { RegistrarsecretoComponent } from './components/registrarsecreto/registrarsecreto.component';
 import { from } from 'rxjs';
+import { AuthGuard} from './auth.guard'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { from } from 'rxjs';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

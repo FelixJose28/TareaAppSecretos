@@ -29,6 +29,7 @@ export class LogginComponent implements OnInit {
           console.log(res)
           this.router.navigate(['/todosecretos'])
           localStorage.setItem('token',res['token'])
+          console.log(res['token'])
 
         },
         err => console.log(err)

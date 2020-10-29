@@ -16,5 +16,10 @@ export class AuthService {
   authlogearse(user){
     return this.http.post<any>(this.URL+'/login',user);
   }
+  authestaLoggeado(){
+    if(localStorage.getItem('token') != null){
+      return true
+    }
+  }
 
 }
