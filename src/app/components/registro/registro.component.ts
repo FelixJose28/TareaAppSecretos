@@ -12,7 +12,8 @@ export class RegistroComponent implements OnInit {
   user= {
     correo: '',
     nombre: '',
-    clave: ''
+    clave: '',
+    repetirclave:''
   }
 
   constructor(private authService: AuthService,
@@ -22,13 +23,19 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
   registrarUser(){
-    this.authService.authregistrar(this.user)
-      .subscribe(
-        res => {
-          console.log(res)
-          this.router.navigate(['/loggin'])
-        },
-        err => console.log(err)
-      )
+    if(this.user.clave === this.user.repetirclave){
+        this.authService.authregistrar(this.user)
+          .subscribe(
+            res => {
+              if(res['Statuscode'] == 200)
+              console.log(res)
+              this.router.navigate(['/loggin'])
+            }
+        ,
+          err => console.log(err)
+        )
+    }else{
+      console.log('contrasenas no validas')
+    }
   }
 }
