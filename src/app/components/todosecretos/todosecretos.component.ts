@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todosecretos',
@@ -7,17 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosecretosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  secretos = []
 
   ngOnInit(): void {
   }
-  nombre = 'Felix'
-  getNombre(){
-    return this.nombre
+  registrarCuenta(){
+    this.router.navigate(["/registrarsecreto"])
   }
-  col = 'text-success'
-  keyUpMethod(){
-      console.log('Presiono enter')
-  }
+
 
 }

@@ -27,7 +27,7 @@ export class RegistroComponent implements OnInit {
         this.authService.authregistrar(this.user)
           .subscribe(
             res => {
-              if(res['Statuscode'] == 200)
+              if(res['StatusCode'] == 200)
               console.log(res)
               this.router.navigate(['/loggin'])
             }
