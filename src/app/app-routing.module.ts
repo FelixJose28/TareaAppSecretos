@@ -7,6 +7,7 @@ import { CambiarclaveComponent } from './components/cambiarclave/cambiarclave.co
 import { RegistrarsecretoComponent } from './components/registrarsecreto/registrarsecreto.component';
 import { TodosecretosComponent } from './components/todosecretos/todosecretos.component';
 import { AuthGuard} from './auth.guard'
+import { SecretoindividualComponent } from './components/secretoindividual/secretoindividual.component'
 
 const routes: Routes = [
 {
@@ -40,6 +41,10 @@ const routes: Routes = [
   path: 'todosecretos',
   component: TodosecretosComponent,
   canActivate: [AuthGuard]
+},
+{
+  path: 'secretoindividual',
+  component: SecretoindividualComponent
 }
 ];
 
