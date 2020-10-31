@@ -20,6 +20,7 @@ import { SecretoindividualComponent } from './components/secretoindividual/secre
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
