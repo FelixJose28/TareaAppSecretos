@@ -27,8 +27,10 @@ export class AuthService {
     return localStorage.getItem('token')
   }
   authLogout(){
-    localStorage.removeItem('token')
-    this.router.navigate['/loggin']
+    if(window.confirm('Desea cerrar la session??')){
+      localStorage.removeItem('token')
+      this.router.navigate['/loggin']
+    }
   }
 
 }
