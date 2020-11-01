@@ -10,7 +10,7 @@ export class TodosecretosComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  secretos = []
+  secretos = ['1']
 
   ngOnInit(): void {
   }
