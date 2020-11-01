@@ -16,7 +16,7 @@ export class RegistrarsecretoComponent implements OnInit {
     fecha:'',
     lugar:'',
     latylng:'',
-    usuario: localStorage.getItem('token')
+    token: localStorage.getItem('token')
 
   }
   constructor(
@@ -29,15 +29,10 @@ export class RegistrarsecretoComponent implements OnInit {
   regitrarSecreto(){
     this.secretosService.authregistrarSecreto(this.secreto)
     .subscribe(res=>{
-      console.log(res)
-      console.log(localStorage.getItem('token'['id']))
-    },err=>{console.log(err)
-            console.log(localStorage.getItem('token'['id']))})
+      if(res['Mensaje'] == 'secreto registrado'){
+        this.router.navigate(['/todosecretos'])
+      }
+    },err=>{console.log(err)}
+    )
   }
-
-  pruebam(){
-    console.log(this.secretosService.verId())
-  }
-
-
 }

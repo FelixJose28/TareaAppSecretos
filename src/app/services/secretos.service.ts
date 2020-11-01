@@ -19,8 +19,8 @@ export class SecretosService {
     authregistrarSecreto(secreto){
       return this.http.post<any>(this.URL+'/usuario/registrarSecreto/',secreto)
     }
-    verId(){
-      return localStorage.getItem('token')
+    authborrarSecreto(id) {
+      return this.http.delete<any>(this.URL + '/secreto/' + id + '?token=' + localStorage.getItem('token'))
     }
 
 
