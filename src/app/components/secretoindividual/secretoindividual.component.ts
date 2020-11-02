@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Isecreto } from 'src/app/interfaces/isecreto';
+import { SecretosService } from 'src/app/services/secretos.service';
 
 @Component({
   selector: 'app-secretoindividual',
@@ -7,18 +9,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SecretoindividualComponent implements OnInit {
 
-  @Input() secre = {
-    titulo:'',
-    descripcion:'',
-    valor_monetario:'',
-    fecha:'',
-    lugar:'',
-    latylng:'',
-    token: localStorage.getItem('token')
-  }
+  @Input() secre: Isecreto
 
   @Output() borrar = new EventEmitter<number>()
-  constructor() { }
+
+  constructor(private secretoService: SecretosService) { }
 
   ngOnInit(): void {
   }
