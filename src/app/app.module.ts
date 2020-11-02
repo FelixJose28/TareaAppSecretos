@@ -15,7 +15,6 @@ import { RegistrarsecretoComponent } from './components/registrarsecreto/registr
 import { from } from 'rxjs';
 import { AuthGuard} from './auth.guard';
 import { TokenInterceptorService} from './services/token-interceptor.service';
-import { IndividualsecretoComponent } from './components/individualsecreto/individualsecreto.component';
 import { SecretoindividualComponent } from './components/secretoindividual/secretoindividual.component';
 
 
@@ -30,7 +29,6 @@ import { SecretoindividualComponent } from './components/secretoindividual/secre
     CambiarclaveComponent,
     TodosecretosComponent,
     RegistrarsecretoComponent,
-    IndividualsecretoComponent,
     SecretoindividualComponent,
   ],
   imports: [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SecretosService } from '../../services/secretos.service';
-import { Isecreto } from 'src/app/interfaces/isecreto';
+
 @Component({
   selector: 'app-registrarsecreto',
   templateUrl: './registrarsecreto.component.html',
@@ -10,7 +10,7 @@ import { Isecreto } from 'src/app/interfaces/isecreto';
 export class RegistrarsecretoComponent implements OnInit {
 
 
-  secreto: Isecreto = {
+  secreto = {
     titulo:'',
     descripcion:'',
     valor_monetario:'',

@@ -20,7 +20,7 @@ export class SecretosService {
       return this.http.post<any>(this.URL+'/usuario/registrarSecreto',secreto)
     }
     authborrarSecreto(id) {
-      return this.http.delete<any>(this.URL + '/secreto/' + id + '?token=' + localStorage.getItem('token'))
+      return this.http.delete<any>(this.URL + '/eliminarSecreto/'+id+'?token='+localStorage.getItem('token'))
     }
 
 

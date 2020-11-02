@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Isecreto } from 'src/app/interfaces/isecreto';
 import { SecretosService } from 'src/app/services/secretos.service';
 
 @Component({
@@ -9,7 +8,7 @@ import { SecretosService } from 'src/app/services/secretos.service';
 })
 export class SecretoindividualComponent implements OnInit {
 
-  @Input() secre: Isecreto
+  @Input() secre 
 
   @Output() borrar = new EventEmitter<number>()
 

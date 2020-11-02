@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SecretosService } from '../../services/secretos.service'
-import { Isecreto } from '../../interfaces/isecreto';
+
 
 @Component({
   selector: 'app-todosecretos',
@@ -10,7 +10,7 @@ import { Isecreto } from '../../interfaces/isecreto';
 })
 export class TodosecretosComponent implements OnInit {
 
-  secret: Isecreto[] = []
+  secret = []
 
 
   constructor(private router: Router,
@@ -23,6 +23,16 @@ export class TodosecretosComponent implements OnInit {
   }
   registrarCuenta(){
     this.router.navigate(["/registrarsecreto"])
+  }
+
+  delete(id) {
+    this.secretoService.authborrarSecreto(id).subscribe(
+        res => {
+          this.getSecretos()
+          console.log(res)
+        },
+        err => console.log(err)
+      )
   }
 
   getSecretos(){
